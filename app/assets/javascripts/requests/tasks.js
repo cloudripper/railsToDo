@@ -28,9 +28,7 @@ var postTask = function (content, successCB, errorCB) {
                 content: content
             }
         },
-        success: function (response) {
-            postID = response.task.id
-        },
+        success: successCB,
         error: errorCB
     }
     
