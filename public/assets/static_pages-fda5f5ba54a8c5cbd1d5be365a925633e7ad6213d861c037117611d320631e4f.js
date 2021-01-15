@@ -7,7 +7,7 @@ var indexInject = function (view) {
     if ($('.static_pages.index').length > 0) {
         indexTasks(function (response) {
             var htmlString = response.tasks.map(function(task) {
-                var action = 'pass'
+                let action = 'pass'
                 switch (view) {
                     case 'active':
                         action = (task.completed) ? 'fail' : 'pass';
@@ -42,4 +42,4 @@ var indexInject = function (view) {
 }
 
 
-//onclick='deleteTask(" + task.id + ")'
+//onclick='deleteTask(" + task.id + ")';

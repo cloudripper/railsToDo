@@ -42,4 +42,4 @@ var indexInject = function (view) {
 }
 
 
-//onclick='deleteTask(" + task.id + ")'
+//onclick='deleteTask(" + task.id + ")';

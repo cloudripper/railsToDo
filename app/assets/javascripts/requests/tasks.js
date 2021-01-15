@@ -19,7 +19,6 @@ var indexTasks = function (successCB, errorCB) {
 
 
 var postTask = function (content, successCB, errorCB) {
-    var postID = null;
     var request = {
         type: 'POST',
         url: 'api/tasks?api_key=1',
@@ -41,9 +40,9 @@ var postTask = function (content, successCB, errorCB) {
 };
 
 var changeStatus = function (task, successCB, errorCB) {
-    const id = task.id
-    const status = (task.checked) ?  true : false
-    const changeVar = (task.checked) ? "mark_complete" : "mark_active"
+    var id = task.id
+    var status = (task.checked) ?  true : false
+    var changeVar = (task.checked) ? "mark_complete" : "mark_active"
 
     var request = {
         type: 'PUT',
@@ -73,9 +72,9 @@ var deleteTask = function (id, successCB, errorCB) {
 
 $(document).ready(function () {
     $(document).on('click', '.form-check-input', function() {
-        let bkg = (this.checked) ? 'bg-success' : 'bg-dark';
-        let rmBkg = (this.checked) ? 'bg-dark' : 'bg-success';
-        let target = $(this).parent().parent()
+        var bkg = (this.checked) ? 'bg-success' : 'bg-dark';
+        var rmBkg = (this.checked) ? 'bg-dark' : 'bg-success';
+        var target = $(this).parent().parent()
         target.removeClass(rmBkg).addClass(bkg)
         
         changeStatus(this);     
@@ -86,7 +85,10 @@ $(document).ready(function () {
         this[0].value = '';
         if (newTask) {
             postTask(newTask);
+            $('#addTask').attr('placeholder', 'New task')
+
         } else {
+            $('#addTask').attr('placeholder', 'What task do you want to add?')
             console.log("No task value to add");
         }
     });

@@ -43,6 +43,9 @@ gem 'bootsnap', '>= 1.4.6', require: false
 #Monolith FullStack example
 gem 'bootstrap', '~> 4.1.3'
 
+#For ES6 support
+gem 'webpacker', git: 'https://github.com/rails/webpacker.git'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '~> 11.1.1', platforms: [:mri, :mingw, :x64_mingw]
