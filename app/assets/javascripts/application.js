@@ -14,4 +14,9 @@
 //= require jquery_ujs
 //= require jquery-readyselector
 //= require requests
+//= require turbolinks
+//= require jquery3
+//= require popper
+//= require bootstrap
+//= require requests/index
 //= require_tree .

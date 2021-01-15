@@ -16,6 +16,8 @@
   </head>
 
   <body class="<%= controller_name %> <%= action_name %>">
+    <%= render "shared/navigation" %>
     <%= yield %>
+    <%= render "shared/footer" %>
   </body>
 </html>
